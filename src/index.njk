@@ -1,7 +1,91 @@
 ---
 layout: layouts/base.njk
-title: Title Strings
+title: Resume
+
+tags:
+  - nav
+navtitle: Resume
 
 description: This is a description that I just wrote.
 ---
-<h1>This is global data: {{siteData.name}}</h1>
+<nav>
+  <a class="nav" href="#about">About</a>
+  <a class="nav" href="#positions">Positions</a>
+  <a class="nav" href="#education">Education</a>
+  <a class="nav" href="#skills">Skills</a>
+  <a class="nav" href="#projects">Projects</a>
+  <a class="nav" href="#contact">Contact</a>
+</nav>
+
+<main>
+  <h2 id="about">About Me</h2>
+  I'll put an About Me section here up top.
+
+
+  <h2 id="positions">Positions</h2>
+  <ul>
+    {%- for post in collections.position | reverse -%}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p>{{ post.data.location }}</p>
+      <p>{{ post.data.date }}</p>
+      <p>{{ post.data.description }}<p>
+    
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <h2 id="education">Education</h2>
+  <ul>
+    {%- for post in collections.education | reverse -%}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p>{{ post.data.institution }}</p>
+      <p>{{ post.data.date }}</p>
+      <p>{{ post.data.description }}<p>
+    
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <h2 id="skills">Skills</h2>
+  <ul>
+    <li><h3>Front-End Web</h3></li>
+    <li><h3>Back-End Web</h3></li>
+    <li><h3>Cloud Computing &amp; Infrastructure</h3></li>
+    <li>
+      <h3>I could also hold a conversation about...</h3>
+      <ul>
+      </ul>
+    </li>
+    <li>
+      <h3>Language</h3>
+      <ul>
+        <li>
+          English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>, <span class="nowrap"> </span> 
+          Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>,<span class="nowrap"> </span>
+          German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a> </span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="projects">Projects</h2>
+  <ul>
+    {%- for post in collections.project | reverse -%}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p>{{ post.data.date }}</p>
+      <p>{{ post.data.description }}<p>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <h2 id="contact">Contact</h2>
+  <ul>
+    <li><b>E-Mail:&ensp;</b><a href="mailto:darius@decepulis.com">darius@decepulis.com</a></li>
+    <li><b>LinkedIn:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></li>
+    <li><b>Facebook:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></li>
+    <li><b>Instagram:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></li>
+  </ul>
+</main>
