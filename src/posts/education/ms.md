@@ -1,6 +1,7 @@
 ---
-title: Master of Science - Computer Science
-institution: University of Cincinnati
+title: Master of Science, Computer Science
+subtitle: University of Cincinnati
 description: MS Description
-date: 2017-07-01
+date: 2017-07
+dateformat: MonthYear
 ---

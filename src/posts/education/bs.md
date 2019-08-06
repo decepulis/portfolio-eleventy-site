@@ -1,6 +1,7 @@
 ---
-title: Bachelor of Science - Computer Engineering
-institution: University of Cincinnati
+title: Bachelor of Science, Computer Engineering
+subtitle: University of Cincinnati
 description: BS Description
-date: 2017-05-01
+date: 2017-05
+dateformat: MonthYear
 ---

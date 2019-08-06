@@ -23,63 +23,32 @@ description: This is a description that I just wrote.
 
 
   <h2 id="positions">Positions</h2>
-  <ul>
-    {%- for post in collections.position | reverse -%}
-    <li>
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p>{{ post.data.location }}</p>
-      <p>{{ post.data.date }}</p>
-      <p>{{ post.data.description }}<p>
-    
-    </li>
-    {%- endfor -%}
-  </ul>
+  {% set postslist = collections.position %}
+  {% include "postslist.njk" %}  
 
   <h2 id="education">Education</h2>
-  <ul>
-    {%- for post in collections.education | reverse -%}
-    <li>
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p>{{ post.data.institution }}</p>
-      <p>{{ post.data.date }}</p>
-      <p>{{ post.data.description }}<p>
-    
-    </li>
-    {%- endfor -%}
-  </ul>
+  {% set postslist = collections.education %}
+  {% include "postslist.njk" %}  
 
   <h2 id="skills">Skills</h2>
-  <ul>
-    <li><h3>Front-End Web</h3></li>
-    <li><h3>Back-End Web</h3></li>
-    <li><h3>Cloud Computing &amp; Infrastructure</h3></li>
-    <li>
-      <h3>I could also hold a conversation about...</h3>
-      <ul>
-      </ul>
-    </li>
-    <li>
-      <h3>Language</h3>
-      <ul>
-        <li>
-          English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>, <span class="nowrap"> </span> 
-          Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>,<span class="nowrap"> </span>
-          German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a> </span>
-        </li>
-      </ul>
-    </li>
-  </ul>
+    <h3>Front-End Web</h3>
+    <h3>Back-End Web</h3>
+    <h3>Cloud Computing &amp; Infrastructure</h3>
+    <h3>I could also hold a conversation about...</h3>
+    <ul>
+    </ul>
+    <h3>Language</h3>
+    <ul>
+      <li>
+        English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>, <span class="nowrap"> </span> 
+        Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>,<span class="nowrap"> </span>
+        German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a> </span>
+      </li>
+    </ul>
 
   <h2 id="projects">Projects</h2>
-  <ul>
-    {%- for post in collections.project | reverse -%}
-    <li>
-      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      <p>{{ post.data.date }}</p>
-      <p>{{ post.data.description }}<p>
-    </li>
-    {%- endfor -%}
-  </ul>
+  {% set postslist = collections.project %}
+  {% include "postslist.njk" %}  
 
   <h2 id="contact">Contact</h2>
   <ul>

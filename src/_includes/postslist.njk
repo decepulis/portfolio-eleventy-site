@@ -1,0 +1,21 @@
+
+{%- for post in postslist | reverse -%}
+<h3>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <div class="subtitle">{{ post.data.subtitle }}</div>
+</h3>
+<ul>
+    <li>
+        <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
+        {% if post.data.dateformat == 'Year' %}
+            {{ post.date | dateFormatYear }}
+        {% elif post.data.dateformat == 'MonthYear' %}
+            {{ post.date | dateFormatMonthYear }}
+        {% else %}
+            {{ post.date | dateFormat }}
+        {% endif %}
+        </time>
+    </li>
+    <li>{{ post.data.description }}</li>
+</ul>
+{%- endfor -%}
