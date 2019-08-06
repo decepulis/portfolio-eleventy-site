@@ -18,43 +18,89 @@ description: This is a description that I just wrote.
 </nav>
 
 <main>
-  <h2 id="about">About Me</h2>
-  I'll put an About Me section here up top.
+  <section id="about">
+    <header><h2>About Me</h2></header>
+    <p>I'll put an About Me section here up top.</p>
+  </section>
 
+  <section id="positions">
+    <header><h2>Positions</h2></header>
+    {% set postslist = collections.positions %}
+    {% include "postslist.njk" %}  
+  </section>
 
-  <h2 id="positions">Positions</h2>
-  {% set postslist = collections.positions %}
-  {% include "postslist.njk" %}  
+  <section id="education">
+    <header><h2>Education</h2></header>
+    {% set postslist = collections.education %}
+    {% include "postslist.njk" %}  
+  </section>
 
-  <h2 id="education">Education</h2>
-  {% set postslist = collections.education %}
-  {% include "postslist.njk" %}  
+  <section id="skills">
+    <header><h2>Skills</h2></header>
 
-  <h2 id="skills">Skills</h2>
-    <h3>Front-End Web</h3>
-    <h3>Back-End Web</h3>
-    <h3>Cloud Computing &amp; Infrastructure</h3>
-    <h3>I could also hold a conversation about...</h3>
-    <ul>
-    </ul>
-    <h3>Language</h3>
-    <ul>
-      <li>
-        English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>, <span class="nowrap"> </span> 
-        Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a>,<span class="nowrap"> </span>
-        German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a> </span>
-      </li>
-    </ul>
+    <section>
+      <header><h3>Front-End Web</h3></header>
+      <dl>
+        <dt>Markup</dt>
+        <dd>HTML5, Markdown, Nunjucks</dd>
+        <dt>Style</dt>
+        <dd>CSS3, Sass, Bootstrap</dd>
+        <dt>Scripting</dt>
+        <dd>JavaScript/ES6</dd>
+        <dt>Frameworks & Libraries</dt>
+        <dd>jQuery, Bootstrap, Vue.js, Chart.js</dd>
+        <dt>Build Tools</dt>
+        <dd>Webpack, Gulp, Babel, PostCSS, Eleventy</dd>
+        <dt>Favorite Topics</dt>
+        <dd>Gamification, SVGs, Load Times, Accessibility</dd>
+      </dl>
+    </section>
 
-  <h2 id="projects">Projects</h2>
-  {% set postslist = collections.projects %}
-  {% include "postslist.njk" %}  
+    <section>
+      <header><h3>Back-End Web</h3></header>
+      <ul>
+      </ul>
+    </section>
 
-  <h2 id="contact">Contact</h2>
-  <ul>
-    <li><b>E-Mail:&ensp;</b><a href="mailto:darius@decepulis.com">darius@decepulis.com</a></li>
-    <li><b>LinkedIn:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></li>
-    <li><b>Facebook:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></li>
-    <li><b>Instagram:&ensp;</b><a target="_blank" rel="nooopener" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></li>
-  </ul>
+    <section>
+      <header><h3>Cloud Computing &amp; Infrastructure <sup>(AWS)</sup></h3></header>
+      <ul>
+      </ul>
+    </section>
+
+    <section>
+      <header><h3>I could also hold a conversation about...</h3></header>
+      <ul>
+      </ul>
+    </section>
+
+    <section>
+      <header><h3>Language</h3></header>
+      <ul>
+        <li>English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a></li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="projects">
+    <header><h2>Projects</h2></header>
+    {% set postslist = collections.projects %}
+    {% include "postslist.njk" %}  
+  </section>
+
+  <section id="contact">
+    <header><h2>Contact</h2></header>
+    <dl>
+      <dt>E-Mail</dt>
+      <dd><a href="mailto:darius@decepulis.com">darius<wbr>@decepulis.com</a></dd>
+      <dt>LinkedIn</dt>
+      <dd><a target="_blank" rel="nooopener" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></dd>
+      <dt>Facebook</dt>
+      <dd><a target="_blank" rel="nooopener" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></dd>
+      <dt>Instagram</dt>
+      <dd><a target="_blank" rel="nooopener" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></dd>
+    </dl>
+  </section>
 </main>
