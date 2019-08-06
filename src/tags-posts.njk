@@ -1,0 +1,15 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+renderData:
+  title: {{ tag }}
+permalink: /posts/{{ tag }}/
+---
+<h1>{{ tag }}</h1>
+
+{% set postslist = collections[ tag ] %}
+{% include "postslist.njk" %}  
