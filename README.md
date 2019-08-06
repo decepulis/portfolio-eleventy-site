@@ -16,4 +16,6 @@ That template provided the following technologies for me to hang my hat on.
 With that template and eleventy's [great documentation](https://www.11ty.io/docs/), I established the project as you see it here.
 
 ## Building and Deploying with Netlify
-I'll probably write about this whenever I come up with it
+Yep. This is what I'm doing. [Netlify](http://netlify.com) watches this repo and builds with `npm run build` every time I commit. It's great. Netlify is great.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83a24e36-aae8-43f2-9c18-3195caed5ea3/deploy-status)](https://app.netlify.com/sites/jovial-engelbart-1fa19d/deploys)
