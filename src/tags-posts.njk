@@ -6,10 +6,10 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/base.njk
 renderData:
-  title: {{ tag }}
+  title: "{{ tag | capitalize  }}"
 permalink: /posts/{{ tag }}/
 ---
-<h1>{{ tag }}</h1>
+<h1>{{ tag | capitalize  }}</h1>
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}  
