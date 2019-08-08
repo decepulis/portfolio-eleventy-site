@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
   // Settings
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
-  eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/img');
 
   // Filters
   eleventyConfig.addFilter("dateFormat", dateObj => {

@@ -9,12 +9,12 @@ navtitle: Resume
 description: This is a description that I just wrote.
 ---
 <nav>
-  <a class="nav" href="#about">About</a>
-  <a class="nav" href="#positions">Positions</a>
-  <a class="nav" href="#education">Education</a>
-  <a class="nav" href="#skills">Skills</a>
-  <a class="nav" href="#projects">Projects</a>
-  <a class="nav" href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#positions">Positions</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Side Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <main>
@@ -77,15 +77,15 @@ description: This is a description that I just wrote.
     <section>
       <header><h3>Language</h3></header>
       <ul>
-        <li>English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
-        <li>Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
-        <li>German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a></li>
+        <li>English <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>Lithuanian <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>German <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a></li>
       </ul>
     </section>
   </section>
 
   <section id="projects">
-    <header><h2>Projects</h2></header>
+    <header><h2>Side Projects</h2></header>
     {% set postslist = collections.projects %}
     {% include "postslist.njk" %}  
   </section>
@@ -96,11 +96,11 @@ description: This is a description that I just wrote.
       <dt>E-Mail</dt>
       <dd><a href="mailto:darius@decepulis.com">darius<wbr>@decepulis.com</a></dd>
       <dt>LinkedIn</dt>
-      <dd><a target="_blank" rel="nooopener" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></dd>
+      <dd><a target="_blank" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></dd>
       <dt>Facebook</dt>
-      <dd><a target="_blank" rel="nooopener" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></dd>
+      <dd><a target="_blank" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></dd>
       <dt>Instagram</dt>
-      <dd><a target="_blank" rel="nooopener" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></dd>
+      <dd><a target="_blank" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></dd>
     </dl>
   </section>
 </main>
