@@ -1,7 +1,7 @@
 ---
 title: Corporate Research Co-op, Bosch
 subtitle: Renningen, Germany
-description: This is a great little description of Bosch
+description: Using web technologies to build a suite of sensor-data analytics tools. In Germany.
 date: 2017-01
 dateformat: Year
 ---
