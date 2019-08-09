@@ -5,102 +5,197 @@ title: Resume
 tags:
   - nav
 navtitle: Resume
-
-description: This is a description that I just wrote.
 ---
 <nav>
-  <a href="#about">About</a>
-  <a href="#positions">Positions</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Side Projects</a>
-  <a href="#contact">Contact</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#positions">Positions</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Side Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <label for="theme">Theme: </label>
+      <select id="theme" name="theme">
+        <option value="rad">Rad</option>
+        <option value="paper">Print</option>
+        <option value="editor">Editor</option>
+        <option value="1989" selected>1989</option>
+        <option value="2019">2019</option>
+      </select>
+    </li>
+  </ul>
 </nav>
+
+{# To Do:
+- Implement Themes
+  - Rad
+  - Print
+  - Editor
+  - 1989
+  - 2019
+- Lazy Load Images
+- SEO & Analytics #}
 
 <main>
   <section id="about">
-    <header><h2>About Me</h2></header>
-    <p>I'll put an About Me section here up top.</p>
+    <header>
+      <h2>About Me</h2>
+    </header>
+    <img id="headshot" src="/img/headshot-bw-web.jpg" align="right" width="300" height="300">
+    <p>I am a Full-Stack Web Developer at Microsensor Labs</p>
+    <p>
+      In my professional and academic experience, I've discovered my enthusiasm for applying my computer software and hardware skills to unique problems that push the envelope. I'm at home when I'm faced with fresh and interesting problems that I get to work out every day.
+    </p>
+    <p>
+      I've also discovered the value of developing strong communication and design skills. These skills represent to me the spark that an engineering solution needs to make it into the real world. After all, what is a new technology if no one can explain it, or if people don't know how to use it?
+    </p>
+    <p>
+      I want to keep learning new things and developing my skills and applying them to exciting problems to build something new.
+    </p>
+
+    <section>
+      <header>
+        <h3>More About Me...</h3>
+      </header>
+      <dl>
+        <dt>Secret Superpowers</dt>
+          <dd>Teaching, Presenting, Writing, Accordion</dd>
+        <dt>Micro-Obsessions</dt>
+          <dd>home automation, <a href="https://www.instagram.com/__dardarbinks/">photography</a>, watching every <a href="https://www.youtube.com/user/patrickhwillems">last</a> <a href="https://www.youtube.com/user/everyframeapainting">video</a> <a href="https://www.youtube.com/user/Nerdwriter1">essay</a> about film on YouTube, watching tech press conferences like they're sporting events, <a href="https://www.instagram.com/p/BW5-WMBF78o/?taken-by=dardarb1nks">hiking</a> &amp; <a href="https://www.instagram.com/p/BXHBFhClR8H/?taken-by=dardarb1nks">backpacking</a>, technology &amp; policy, <strike>technology &amp; humans</strike> design, <a href="https://www.vw.com/models/golf-gti/">driving stick</a>, ultimate frisbee</dd>
+        <dt>Essential Podcasts</dt>
+          <dd><a href="https://99percentinvisible.org">99pi</a>, <a href="http://atp.fm">ATP</a>, <a href="https://www.relay.fm/connected">Connected</a>, <a href="http://www.slate.com/articles/podcasts/lexicon_valley.html">Lexicon Valley</a>, <a href="http://radiolab.org">Radiolab</a>, <a href="https://gimletmedia.com/shows/reply-all">Reply All</a>, <a href="https://www.wnycstudios.org/shows/radiolabmoreperfect">More Perfect</a>, <a href="https://www.slashfilm.com/category/features/slashfilmcast/">The /Filmcast</a>, <a href="https://www.theverge.com/the-vergecast">The Vergecast</a>, <a href="https://www.thisamericanlife.org">This American Life</a></dd>
+      </dl>
+    </section>
   </section>
 
   <section id="positions">
-    <header><h2>Positions</h2></header>
-    {% set postslist = collections.positions %}
-    {% include "postslist.njk" %}  
+    <header>
+      <h2>Positions</h2>
+    </header>
+    {% set postslist = collections.positions | head(-1) %}
+    {% include "postslist.njk" %}
+
+    {% set positionsUrl %}/posts/positions/{% endset %}
+    <a href={{ positionsUrl | url }}>View All Positions &rarr;</a>  
   </section>
 
   <section id="education">
-    <header><h2>Education</h2></header>
-    {% set postslist = collections.education %}
+    <header>
+      <h2>Education</h2>
+    </header>
+    {% set postslist = collections.education | head(-2) %}
     {% include "postslist.njk" %}  
+
+    {% set educationUrl %}/posts/education/{% endset %}
+    <a href={{ educationUrl | url }}>View All Education &rarr;</a>
   </section>
 
   <section id="skills">
-    <header><h2>Skills</h2></header>
+    <header>
+      <h2>Skills</h2>
+    </header>
 
     <section>
-      <header><h3>Front-End Web</h3></header>
+      <header>
+        <h3>Front-End Web</h3>
+      </header>
       <dl>
         <dt>Markup</dt>
-        <dd>HTML5, Markdown, Nunjucks</dd>
+          <dd>HTML5, Markdown, Nunjucks</dd>
         <dt>Style</dt>
-        <dd>CSS3, Sass, Bootstrap</dd>
+          <dd>Sass, CSS3, Bootstrap</dd>
         <dt>Scripting</dt>
-        <dd>JavaScript/ES6</dd>
+          <dd>JavaScript/ES6</dd>
         <dt>Frameworks & Libraries</dt>
-        <dd>jQuery, Bootstrap, Vue.js, Chart.js</dd>
+          <dd>jQuery, Bootstrap, Vue.js, Chart.js</dd>
         <dt>Build Tools</dt>
-        <dd>Webpack, Gulp, Babel, PostCSS, Eleventy</dd>
+          <dd>Webpack, Gulp, Babel, PostCSS, Eleventy</dd>
         <dt>Favorite Topics</dt>
-        <dd>Gamification, SVGs, Load Times, Accessibility</dd>
+          <dd>Gamification, SVGs, Load Times, Accessibility</dd>
       </dl>
     </section>
 
     <section>
-      <header><h3>Back-End Web</h3></header>
+      <header>
+        <h3>Back-End Web</h3>
+        <dl>
+          <dt>Libraries<dt>
+            <dd>Django, DRF</dt>
+          <dt>Scripting</dt>
+            <dd>Python 3, node.js</dd>
+          <dt>Databases</dt>
+            <dd>I've got the basics down pretty well.</dd>
+          </dl>
+      </header>
       <ul>
       </ul>
     </section>
 
     <section>
-      <header><h3>Cloud Computing &amp; Infrastructure <sup>(AWS)</sup></h3></header>
+      <header>
+        <h3>Cloud Computing, Networking &amp; Infrastructure</h3>
+        <dl>AWS</dl>
+          <dd></dd>
+        <dl>Servers<dl>
+          <dd>Well, I've configured Apache before.</dd>
+      </header>
       <ul>
       </ul>
     </section>
 
     <section>
-      <header><h3>I could also hold a conversation about...</h3></header>
+      <header>
+        <h3>I could also hold a conversation about...</h3>
+        <dl>
+          <dt>Code</dt>
+            <dd>Python for Data Science, MATLAB, LaTeX, Swift, C, Assembly (in that order)</dd>
+          <dt>Design &amp; Creative Tools</dt>
+            <dd>UI/UX, Accessibility, Photoshop, Illustrator, Final Cut Pro</dd>
+          <dt>Hardware</dt>
+            <dd>Arduino, Raspberry Pi, BLE, and I used to take Low-Level Computing and Electronics courses</dd>
+        </dl>
+      </header>
       <ul>
       </ul>
     </section>
 
     <section>
-      <header><h3>Language</h3></header>
+      <header>
+        <h3>Language</h3>
+      </header>
       <ul>
-        <li>English <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
-        <li>Lithuanian <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
-        <li>German <a target="_blank" href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a></li>
+        <li>English <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>Lithuanian <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(C2)</a></li>
+        <li>German <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels">(A2)</a></li>
       </ul>
     </section>
   </section>
 
   <section id="projects">
-    <header><h2>Side Projects</h2></header>
-    {% set postslist = collections.projects %}
+    <header>
+      <h2>Side Projects</h2>
+    </header>
+    {% set postslist = collections.projects | head(-4) %}
     {% include "postslist.njk" %}  
+
+    {% set projectUrl %}/posts/projects/{% endset %}
+    <a href={{ projectUrl | url }}>View All Projects &rarr;</a>
   </section>
 
   <section id="contact">
-    <header><h2>Contact</h2></header>
+    <header>
+      <h2>Contact</h2>
+    </header>
     <dl>
       <dt>E-Mail</dt>
-      <dd><a href="mailto:darius@decepulis.com">darius<wbr>@decepulis.com</a></dd>
+        <dd><a href="mailto:darius@decepulis.com">darius<wbr>@decepulis.com</a></dd>
       <dt>LinkedIn</dt>
-      <dd><a target="_blank" href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></dd>
+        <dd><a href="https://www.linkedin.com/in/decepulis/">https://www.linkedin.com/<wbr>in/<wbr>decepulis/</a></dd>
       <dt>Facebook</dt>
-      <dd><a target="_blank" href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></dd>
+        <dd><a href="https://www.facebook.com/de.cepulis">https://www.facebook.com/<wbr>de.cepulis/</a></dd>
       <dt>Instagram</dt>
-      <dd><a target="_blank" href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></dd>
+        <dd><a href="https://www.instagram.com/__dardarbinks/">https://www.instagram.com/<wbr>__dardarbinks/</a></dd>
     </dl>
   </section>
 </main>
