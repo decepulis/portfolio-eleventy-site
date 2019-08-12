@@ -20,7 +20,15 @@
   <header>
     <h1 class="home"><a href="{{ '/' | url }}">Darius Cepulis</a></h1>
   </header>
+  <label for="theme">Theme: </label>
+  <select id="theme" name="theme">
+    <option value="rad" selected>Rad</option>
+    <option value="paper">Print</option>
+    <option value="editor">Editor</option>
+    <option value="1989">1989</option>
+    <option value="2019">2019</option>
+  </select>
   {{ content | safe }}
-  <script src="/scripts/base.js"></script>
+  <script src="/scripts/main.js"></script>
 </body>
 </html>

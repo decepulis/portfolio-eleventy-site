@@ -1,10 +1,14 @@
-const path = require('path');
-
 module.exports = {
-  entry: './src/scripts/base.js',
+  entry: [
+    // 'core-js/modules/es.promise',
+    // 'core-js/modules/es.array.iterator',
+    './src/scripts/main.js',
+  ],
   output: {
-    path: path.resolve(__dirname, 'dist/scripts'),
-    filename: 'base.js'
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'scripts/[name].js',
+    chunkFilename: 'scripts/[name].bundle.js'
   },
   module: {
     rules: [
@@ -12,10 +16,7 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       }
     ]

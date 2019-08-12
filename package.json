@@ -2,7 +2,7 @@
   "name": "decepulis",
   "version": "2.0.0",
   "description": "A portfolio website built with modern web tools",
-  "main": "base.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",
@@ -42,7 +43,7 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.3.0",
     "node-sass": "^4.12.0"
   }
 }
