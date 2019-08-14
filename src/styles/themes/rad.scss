@@ -1,51 +1,37 @@
 html.rad {
-    // Begin by defining variable fallback colors
-    $page_bg: #fff;
-    $page_color: #000;
-    $text_bg: #000;
-    $text_color: #fff;
-    $header_bg: #000;
-    $header_color: #fff;
+    --hue: 0;
+    --sat: 100%;
+    --lit: 70%;
 
-    background-color: $page_bg;
-    background-color: var(--pageBackground, $page_bg);
-    color: $page_color;
-    color: var(--pageColor, $page_color);
+    --primary: hsl(var(--hue), var(--sat), var(--lit));
+    --secondary: hsl(calc(var(--hue) - 120), var(--sat), var(--lit));
+    --tertiary: hsl(calc(var(--hue) + 120), var(--sat), var(--lit));
 
-    font-family: sans-serif;
+
+    background-color: var(--primary);
+    color: var(--primaryText);
+
+    font-family: serif;
     font-size: 1.5em;
 
     a {
         color: inherit;
-        text-decoration-color: $page_color;
-        text-decoration-color: var(--pageColor, $page_color);
+        text-decoration-color: var(--tertiary);
     }
 
     p, ul, dl {
-        background-color: $text_bg;
-        background-color: var(--textBackground, $text_bg);
-        color: $text_color;
-        color: var(--textColor, $text_color);
-
-        a {
-            text-decoration-color: $header_bg;
-            text-decoration-color: var(--headerBackground, $header_bg);
-        }
+        background-color: var(--secondary);
+        color: var(--secondaryText);
+        a { text-decoration-color: var(--primary); }
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: serif;
+        font-family: sans-serif;
         display: inline-block;
 
-        background-color: $header_bg;  // legacy browsers
-        background-color: var(--headerBackground, $header_bg);
-        color: $header_color;
-        color: var(--headerColor, $header_color);
-
-        a {
-            text-decoration-color: $text_bg;
-            text-decoration-color: var(--textBackground, $text_bg);
-        }
+        background-color: var(--tertiary);
+        color: var(--tertiaryText);
+        a { text-decoration-color: var(--secondary); }
     }
 
     h1 { font-size: 3rem;}
