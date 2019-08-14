@@ -67,7 +67,9 @@ navtitle: Resume
     {% include "postslist.njk" %}
 
     {% set positionsUrl %}/posts/positions/{% endset %}
-    <a href={{ positionsUrl | url }}>View All Positions &rarr;</a>  
+    <p>
+      <a href={{ positionsUrl | url }}>View All Positions &rarr;</a>  
+    </p>
   </section>
 
   <section id="education">
@@ -78,7 +80,9 @@ navtitle: Resume
     {% include "postslist.njk" %}  
 
     {% set educationUrl %}/posts/education/{% endset %}
-    <a href={{ educationUrl | url }}>View All Education &rarr;</a>
+    <p>
+      <a href={{ educationUrl | url }}>View All Education &rarr;</a>
+    </p>
   </section>
 
   <section id="skills">
@@ -166,7 +170,9 @@ navtitle: Resume
     {% include "postslist.njk" %}  
 
     {% set projectUrl %}/posts/projects/{% endset %}
-    <a href={{ projectUrl | url }}>View All Projects &rarr;</a>
+    <p>
+      <a href={{ projectUrl | url }}>View All Projects &rarr;</a>
+    </p>
   </section>
 
   <section id="contact">
