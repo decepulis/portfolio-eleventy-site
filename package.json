@@ -8,14 +8,12 @@
     "clean": "rm -rf dist",
     "eleventy:default": "npx eleventy",
     "eleventy:watch": "npx eleventy --watch",
-    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
-    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
-    "scripts:prod": "webpack --mode=production",
-    "scripts:dev": "webpack --mode=development",
+    "webpack:prod": "webpack --config webpack.prod.js",
+    "webpack:dev": "webpack --config webpack.dev.js",
     "serve": "light-server -c .lightserverrc",
-    "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "dev": "npm-run-all clean webpack:dev eleventy:default --parallel eleventy:watch serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
+    "build": "run-s clean webpack:prod eleventy:default --print-label"
   },
   "repository": {
     "type": "git",
@@ -34,16 +32,22 @@
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "light-server": "^2.6.2",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0",
     "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "acorn": "^6.3.0",
+    "highlight.js": "^9.15.9",
     "node-sass": "^4.12.0"
   }
 }

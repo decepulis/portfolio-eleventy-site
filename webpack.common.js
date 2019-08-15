@@ -1,8 +1,6 @@
 module.exports = {
-  entry: [
-    // 'core-js/modules/es.promise',
-    // 'core-js/modules/es.array.iterator',
-    './src/scripts/main.js',
+    entry: [
+      './src/scripts/main.js',
   ],
   output: {
     path: __dirname + '/dist',

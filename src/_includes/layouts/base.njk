@@ -12,8 +12,6 @@
   <meta name="description" content="{{ renderData.description or description or metadata.description }}">
 
   <title>DC - {{ renderData.title or title or metadata.title }}</title>
-
-  <link rel="stylesheet" href="/styles/base.css">
 </head>
 
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
@@ -23,10 +21,10 @@
   <p>
     <label for="theme">Theme: </label>
     <select id="theme" name="theme">
-      <option value="rad" selected>Rad</option>
+      <option value="rad">Rad</option>
       <option value="paper">Print</option>
       <option value="editor">Editor</option>
-      <option value="1989">1989</option>
+      <option value="1989" selected>1989</option>
       <option value="2019">2019</option>
     </select>
   </p>
