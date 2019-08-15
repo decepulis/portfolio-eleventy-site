@@ -35,7 +35,10 @@ module.exports = {
 }
 
 function fixUrlsForGitHub(content) {
-  var localPostUrl = /\[(.*)\]\(\/posts\/(.*)\/\)/
+  var siteUrl = 'https://jovial-engelbart-1fa19d.netlify.com'
+  var localUrl = /\[(.*)\]\(\/(.*)\/\)/g
+  var frontMatter = /---[\s\S]*title[\s\S]*---/
   return content.toString()
-    .replace(localPostUrl, "[$1](./src/posts/$2.md)");
+    .replace(localUrl, `[$1](${siteUrl}/$2/)`)
+    .replace(frontMatter, '');
 }

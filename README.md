@@ -1,9 +1,4 @@
----
-title: This Website
-description: Some fun with SSGs and CSS.
-date: 2019-08
-dateformat: MonthYear
----
+
 ## Development
 ### Build Pipeline: Webpack & 11ty
 The build process used in this project can largely be credited to the 11ty starting point template [deventy](https://github.com/ianrose/deventy), by Ian Rose (who has supremely good web development sensibilities).
@@ -26,4 +21,4 @@ Yep. This is what I'm doing. [Netlify](http://netlify.com) watches this repo and
 
 ## Themes
 ### Rad
-Deserved [its own blog post](./src/posts/blog/2019/portfolio-theme-rad.md)
+Deserved [its own blog post](https://jovial-engelbart-1fa19d.netlify.com/posts/blog/2019/portfolio-theme-rad/)
