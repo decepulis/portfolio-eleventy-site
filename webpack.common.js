@@ -1,3 +1,5 @@
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     entry: [
       './src/scripts/main.js',
@@ -18,5 +20,22 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyPlugin([
+      {
+        from: './src/posts/projects/2019_portfolio_site.md',
+        to: '../README.md',
+        transform(content, path) {
+          return fixUrlsForGitHub(content)
+        },
+      }
+    ])
+  ]
+}
+
+function fixUrlsForGitHub(content) {
+  var localPostUrl = /\[(.*)\]\(\/posts\/(.*)\/\)/
+  return content.toString()
+    .replace(localPostUrl, "[$1](./src/posts/$2.md)");
 }
