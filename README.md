@@ -1,3 +1,10 @@
+As fun as 11ty has been, I gotta say, Gatsby is a bit easier for what I'm trying to do.
+The web-minimalist in me is dying, but there's no denying that both the developer experience _and_ the user experience after first load (~2x bigger than this site) is _way_ better on Gatsby.
+
+Plus, I've been meaning to dig deeper into the big JAMstack players anyways.
+
+Check out the continuing development of this site over at [portfolio-jam-site](https://github.com/decepulis/portfolio-jam-site)
+
 
 ## Development
 ### Build Pipeline: Webpack & 11ty
