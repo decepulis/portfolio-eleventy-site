@@ -1,9 +1,7 @@
 As fun as 11ty has been, I gotta say, Gatsby is a bit easier for what I'm trying to do.
 The web-minimalist in me is dying, but there's no denying that both the developer experience _and_ the user experience after first load (~2x bigger than this site) is _way_ better on Gatsby.
 
-Plus, I've been meaning to dig deeper into the big JAMstack players anyways.
-
-Check out the continuing development of this site over at [portfolio-jam-site](https://github.com/decepulis/portfolio-jam-site)
+Check out the continuing development of this site over at [portfolio-gatsby-site](https://github.com/decepulis/portfolio-gatsby-site)
 
 
 ## Development
@@ -25,7 +23,3 @@ With that template and eleventy's [great documentation](https://www.11ty.io/docs
 Yep. This is what I'm doing. [Netlify](http://netlify.com) watches this repo and builds with `npm run build` every time I commit. It's great. Netlify is great.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/83a24e36-aae8-43f2-9c18-3195caed5ea3/deploy-status)](https://app.netlify.com/sites/jovial-engelbart-1fa19d/deploys)
-
-## Themes
-### Rad
-Deserved [its own blog post](https://jovial-engelbart-1fa19d.netlify.com/posts/blog/2019/portfolio-theme-rad/)
